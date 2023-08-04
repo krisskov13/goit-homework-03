@@ -90,6 +90,7 @@ align-items: center;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
 }
 .all:hover,
 .all:focus {
@@ -129,6 +130,8 @@ align-items: center;
     padding-bottom: 188px;
 }
 .main-title {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 48px;
     color: var(--white-color);
     font-weight: 700;
@@ -136,10 +139,12 @@ align-items: center;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
+    max-width: 496px;
 }
 
 .button {
-    display: flex;
+    min-width: 169px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     border: 0px;
@@ -165,8 +170,14 @@ align-items: center;
 }
 
 .second-section {
-    padding-top: 120px;
+    padding: 120px 0;
 }
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
 .li-second-section:not(:last-child) {
     margin-right: 24px;
 }
@@ -255,7 +266,7 @@ align-items: center;
     padding-bottom: 100px;
  }
 .logo-footer {
-    display: flex;
+    display: inline-block;
     margin-bottom: 16px;
     color:var(--nav-color);
     font-family: 'Raleway', sans-serif;
@@ -285,12 +296,12 @@ align-items: center;
 .list-portfolio {
     display: flex;
     justify-content: center;
-}
-.li-portfolio {
-    display: flex;
-    justify-content: center;
     margin-bottom: 72px;
 }
+/* .li-portfolio {
+    display: flex;
+    justify-content: center;
+} */
 .li-portfolio:not(:last-child) {
     margin-right:24px;
 }
@@ -312,26 +323,30 @@ align-items: center;
     background-color: #404BBF;
     color: var(--white-color);
 }
-
+ .button-portfolio:hover,
+ .button-portfolio:focus {
+    border: 1px solid transparent;
+ }
 .works {
     display: flex;
     flex-wrap: wrap;
 }
+.item {
+    width: calc((100% - 48px) / 3);
+}
 
+.item:not(:nth-child(3n)) {
+    margin-right: 24px;
+} 
 .item:not(:nth-last-child(-n + 3)) {
     margin-bottom: 48px;
 }
 
-.works > .item {
-    flex-basis: calc(100% / 3);
-}
 .title-text-portfolio {
-    padding-left: 16px;
-    padding-top: 32px;
-    padding-bottom: 32px;
     border: 1px solid #E7E9FC;
     border-top: 0px;
     width: 360px;
+    padding: 32px 16px;
 }
 .title-works {
     margin-bottom: 8px;
