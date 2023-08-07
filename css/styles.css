@@ -47,6 +47,18 @@ body {
     padding-bottom: 120px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /* HEADER*/
 .header {
     padding-top: 24px;
@@ -171,17 +183,6 @@ align-items: center;
 
 .second-section {
     padding: 120px 0;
-}
-
-.visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
 }
 
 .li-second-section:not(:last-child) {
